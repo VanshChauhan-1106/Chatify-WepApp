@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add new msg</title>
+    <%- include("includes/favicon.ejs") %>
+    <!-- <link rel="stylesheet" href="/stylesheets/new.css" /> -->
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body class="bg-custom-sky-bg text-white p-3">
+    <div class="flex justify-center mt-4 mx-4">
+      <form
+      action="/chats"
+      method="POST"
+      class="bg-slate-600 rounded-md flex flex-col items-center justify-self-center w-fit px-3 py-2 mt-4"
+      >
+      <h1 class="text-2xl p-3 text-center underline">Write new chat!</h1>
+      <div>
+          <div class="px-3 py-5">
+            <label class="sm:text-xl text-lg">Enter your name : </label>
+            <input
+              class="rounded-lg sm:text-md text-sm hover:bg-black text-black hover:text-white px-3 py-2 w-4/5 mt-2"
+              type="text"
+              placeholder="Sender's Name"
+              name="from"
+              required
+            />
+          </div>
+          <div class="px-3 py-2">
+            <label class="sm:text-xl text-lg">Enter your message : </label>
+            <br />
+            <textarea
+              class="rounded-lg px-3 py-2 mt-2 hover:bg-black text-black hover:text-white w-4/5 md:text-md "
+              name="msg"
+              placeholder="Message!"
+              cols="30"
+              rows="4"
+              required
+            ></textarea>
+          </div>
+          <div class="px-3 py-5">
+            <label class="sm:text-xl text-lg">Enter receiver's name : </label>
+            <input
+              class="rounded-xl sm:text-md px-3 py-2 hover:bg-black text-black hover:text-white w-4/5 mt-2"
+              type="text"
+              name="to"
+              placeholder="Receiver's Name"
+              required
+            />
+            <br />
+            <button
+              class="bg-transparent border-solid border-2 border-white rounded-xl p-2 hover:bg-black my-5"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

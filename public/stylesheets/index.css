@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #5da5db;
+    color: white;
+    font-family: "poppins";
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: auto;
+}
+
+.chat-box {
+    height: 200px;
+    background-color: #3498db;
+    margin: 10px 20px 10px 20px;
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.chat-box:hover {
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    transition: all 0.2s;
+}
+
+.msg {
+    font-size: 20px;
+}
+
+.fa-message {
+    padding-right: 5px;
+}

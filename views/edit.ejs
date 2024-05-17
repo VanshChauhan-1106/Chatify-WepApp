@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit chat</title>
+    <%- include("includes/favicon.ejs") %>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body class="bg-custom-sky-bg text-white p-3">
+    <div class="flex justify-center mt-4 mx-4">
+      <form
+        action="/chats/<%= chat._id %>?_method=PUT"
+        method="POST"
+        class="bg-slate-600 rounded-md flex flex-col items-center justify-self-center w-fit px-3 py-2 mt-4"
+      >
+        <h1 class="text-2xl p-3 text-center underline">Edit your chat!</h1>
+        <div>
+          <div class="px-3 py-3">
+            <p class="sm:text-xl text-lg">Your chat id : <%= chat.id %></p>
+          </div>
+          <div class="px-3 py-3">
+            <p class="sm:text-xl text-lg">
+              This chat was send from <i><%= chat.from %></i> to
+              <i><%= chat.to %></i>
+            </p>
+          </div>
+
+          <div class="px-3 py-2">
+            <p class="sm:text-xl text-lg">Edit your msg :</p>
+            <textarea
+              class="rounded-lg px-3 py-2 mt-1 hover:bg-black text-black hover:text-white w-4/5 md:text-md"
+              name="msg"
+              placeholder="Message!"
+              cols="30"
+              rows="4"
+              required
+            ><%= chat.msg %></textarea>
+          </div>
+          <div class="px-3 py-3">
+            <button
+              class="bg-transparent border-solid border-2 border-white rounded-xl py-2 hover:bg-black my-3 px-5"
+            >
+              Edit
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
